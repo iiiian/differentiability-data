@@ -38,8 +38,7 @@
     },
     "states": [
         {
-            "path": "topology-compliance.json",
-            "id": 0
+            "path": "topology-compliance.json"
         }
     ]
 }

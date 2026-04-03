@@ -6,9 +6,7 @@
             "composition": []
         }
     ],
-    "parameters": [
-
-    ],
+    "parameters": "auto",
     "functionals": [
         {
             "type": "stress_norm",
@@ -25,8 +23,7 @@
     ],
     "states": [
         {
-            "path": "laplacian.json",
-            "id": 0
+            "path": "laplacian.json"
         }
     ],
     "solver": {

@@ -1,12 +1,11 @@
 {
     "variable_to_simulation": [
         {
-            "type": "dirichlet",
+            "type": "dirichlet-boundary",
             "state": 0,
-            "surface_selection": [
+            "active_boundary_ids": [
                 1
             ],
-            "composite_map_type": "time_step_indexing",
             "composition": [
                 {
                     "type": "slice",
@@ -15,12 +14,11 @@
             ]
         },
         {
-            "type": "dirichlet",
+            "type": "dirichlet-boundary",
             "state": 0,
-            "surface_selection": [
+            "active_boundary_ids": [
                 2
             ],
-            "composite_map_type": "time_step_indexing",
             "composition": [
                 {
                     "type": "slice",
@@ -29,12 +27,11 @@
             ]
         },
         {
-            "type": "dirichlet",
+            "type": "dirichlet-boundary",
             "state": 0,
-            "surface_selection": [
+            "active_boundary_ids": [
                 3
             ],
-            "composite_map_type": "time_step_indexing",
             "composition": [
                 {
                     "type": "slice",

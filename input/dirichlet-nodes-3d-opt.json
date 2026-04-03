@@ -3,8 +3,7 @@
         {
             "type": "dirichlet-nodes",
             "state": 0,
-            "composite_map_type": "indices",
-            "composite_map_indices": [
+            "active_geometry_nodes": [
                 0,
                 1,
                 4,
@@ -13,7 +12,7 @@
             "composition": []
         }
     ],
-    "parameters": [],
+    "parameters": "auto",
     "functionals": [
         {
             "type": "stress_norm",

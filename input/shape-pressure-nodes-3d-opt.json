@@ -4,15 +4,17 @@
             "type": "shape",
             "state": 0,
             "composition": [],
-            "composite_map_type": "boundary_excluding_surface",
-            "surface_selection": [
-                1,
-                5,
-                3
-            ]
+            "active_geometry_nodes": {
+                "type": "boundary_excluding_surface",
+                "selection": [
+                    1,
+                    5,
+                    3
+                ]
+            }
         }
     ],
-    "parameters": [],
+    "parameters": "auto",
     "functionals": [
         {
             "type": "transient_integral",
