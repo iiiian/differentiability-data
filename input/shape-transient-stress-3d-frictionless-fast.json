@@ -1,26 +1,32 @@
 {
     "geometry": [
         {
-            "mesh": "../square.obj",
+            "mesh": "../plank.msh",
             "transformation": {
-                "rotation": -30,
+                "rotation": 30,
+                "rotation_mode": "x",
                 "scale": [
-                    5,
-                    0.02
+                    2.0,
+                    2.0,
+                    2.0
                 ]
             },
             "volume_selection": 1,
             "surface_selection": 1
         },
         {
-            "mesh": "../circle.msh",
+            "mesh": "../sphere600.msh",
             "transformation": {
                 "translation": [
-                    0.26,
-                    0.5
+                    0,
+                    0.5,
+                    -0.2
                 ],
-                "rotation": -30,
-                "scale": 1.0
+                "scale": [
+                    0.5,
+                    0.5,
+                    0.5
+                ]
             },
             "volume_selection": 2,
             "surface_selection": 2
@@ -35,14 +41,14 @@
     },
     "time": {
         "t0": 0,
-        "tend": 0.25,
-        "time_steps": 10
+        "tend": 0.24,
+        "time_steps": 12
     },
     "contact": {
         "enabled": true,
-        "use_convergent_formulation": true,
         "dhat": 0.001,
-        "friction_coefficient": 0.2
+        "friction_coefficient": 0.0,
+        "use_convergent_formulation": true
     },
     "solver": {
         "linear": {
@@ -53,30 +59,24 @@
         },
         "nonlinear": {
             "line_search": {
-                "use_grad_norm_tol": 2.5e-05
-            },
-            "norm_type": "Euclidean",
-            "rel_grad_norm_tol": 0,
-            "first_grad_norm_tol": 2.5000000000000003e-12,
-            "grad_norm_tol": 2.5e-10
+                "use_grad_norm_tol": 0.001
+            }
         },
         "contact": {
-            "barrier_stiffness": 100000.0
-        },
-        "advanced": {
-            "characteristic_force_density": 1,
-            "characteristic_length": 1
+            "barrier_stiffness": 10000000000.0
         }
     },
     "boundary_conditions": {
         "rhs": [
             0,
-            9.81
+            9.81,
+            0
         ],
         "dirichlet_boundary": [
             {
                 "id": 1,
                 "value": [
+                    0,
                     0,
                     0
                 ]
@@ -85,11 +85,9 @@
     },
     "materials": {
         "type": "NeoHookean",
-        "E": 1000000.0,
-        "nu": 0.48,
-        "rho": 1000,
-        "phi": 10,
-        "psi": 10
+        "E": 100000.0,
+        "nu": 0.3,
+        "rho": 1000
     },
     "output": {
         "advanced": {

@@ -3,10 +3,23 @@
         {
             "type": "shape",
             "state": 0,
-            "composition": []
+            "composition": [],
+            "composite_map_type": "boundary",
+            "surface_selection": [
+                2
+            ]
         }
     ],
-    "parameters": [],
+    "parameters": [
+        {
+            "number": {
+                "surface_selection": [
+                    2
+                ],
+                "state": 0
+            }
+        }
+    ],
     "functionals": [
         {
             "type": "transient_integral",
@@ -15,27 +28,16 @@
             "static_objective": {
                 "type": "stress_norm",
                 "state": 0,
+                "power": 2,
                 "volume_selection": [
-                    1
+                    2
                 ]
             }
         }
     ],
     "states": [
         {
-            "path": "shape-neumann-nodes.json"
+            "path": "shape-transient-stress-3d-frictionless-fast.json"
         }
-    ],
-    "solver": {
-        "advanced": {
-            "characteristic_force_density": 1,
-            "characteristic_length": 1
-        },
-        "nonlinear": {
-            "norm_type": "Euclidean",
-            "rel_grad_norm_tol": 0,
-            "first_grad_norm_tol": 1e-10,
-            "grad_norm_tol": 1e-08
-        }
-    }
+    ]
 }
